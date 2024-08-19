@@ -36,18 +36,6 @@
     </style>
 </head>
 <body>
-    <button id="externalLinkButton">Zum Frageformular</button>
-
-    <script>
-        document.getElementById("externalLinkButton").addEventListener("click", function() {
-            // Versuche, den Link in einem neuen Tab oder Fenster zu öffnen
-            var url = 'https://stackoverflowteams.com/c/prodato/questions/ask';
-            var newWindow = window.open(url, '_blank');
-            if (!newWindow || newWindow.closed || typeof newWindow.closed == 'undefined') {
-                // Popup-Blocker, versuchen Sie, den Link direkt zu öffnen
-                window.location.href = url;
-            }
-        });
-    </script>
+    <button onclick="window.open('https://stackoverflowteams.com/c/prodato/questions/ask', '_blank')">Zum Frageformular</button>
 </body>
 </html>

@@ -1,6 +1,7 @@
 <html>
 <head>
-    <title>Externer Link</title>
+    <meta charset="UTF-8">
+    <title>Externer Link mit Anleitung</title>
     <style>
         body {
             font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -10,9 +11,30 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            flex-direction: column;
         }
 
-        a {
+        .instructions {
+            background-color: #ffffff;
+            border: 1px solid #d1d1d1;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            max-width: 500px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            font-size: 16px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .instructions a {
+            font-weight: bold;
+            text-decoration: underline;
+            color: inherit; /* Keine farbliche Hervorhebung */
+        }
+
+        a.button-link {
             display: inline-block;
             background-color: #6264a7;
             color: white;
@@ -25,18 +47,29 @@
             transition: background-color 0.3s ease, box-shadow 0.3s ease;
         }
 
-        a:hover {
+        a.button-link:hover {
             background-color: #464775;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
         }
 
-        a:focus {
+        a.button-link:focus {
             outline: none;
             box-shadow: 0 0 0 3px rgba(98, 100, 167, 0.5);
         }
     </style>
 </head>
 <body>
-    <a href="https://stackoverflowteams.com/c/prodato/questions/ask" target="_blank">Poste deine eigene Frage</a>
+
+    <!-- Anleitung -->
+    <div class="instructions">
+        Wenn du eine Frage hast, kannst du gerne unseren <a href="https://chatgpt.com/g/g-LgohH7oPN-axon-ivy-chatbot" target="_blank">Chatbot</a> verwenden oder im <a href="https://stackoverflowteams.com/c/prodato/questions" target="_blank">Q&A-Bereich</a> nachsehen, ob deine Frage dort bereits beantwortet wurde. <br><br>
+        Falls du immer noch keine passende Antwort gefunden hast, zögere nicht, deine Frage selbst zu posten.
+    </div>
+
+    <!-- Button als Link -->
+    <a href="https://stackoverflowteams.com/c/prodato/questions/ask" target="_blank" class="button-link">Poste deine eigene Frage</a>
+
 </body>
 </html>
+
+

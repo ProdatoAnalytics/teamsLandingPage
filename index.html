@@ -1,7 +1,6 @@
 <html>
 <head>
     <title>Externer Link</title>
-    <script src="https://statics.teams.cdn.office.net/sdk/v1.9.0/js/MicrosoftTeams.min.js"></script>
     <style>
         body {
             font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -40,12 +39,14 @@
     <button id="externalLinkButton">Zum Frageformular</button>
 
     <script>
-        // Warten bis die Microsoft Teams API bereit ist
-        microsoftTeams.initialize();
-
-        // Button-Klick Event
         document.getElementById("externalLinkButton").addEventListener("click", function() {
-            microsoftTeams.executeDeepLink('https://stackoverflowteams.com/c/prodato/questions/ask');
+            // Versuche, den Link in einem neuen Tab oder Fenster zu öffnen
+            var url = 'https://stackoverflowteams.com/c/prodato/questions/ask';
+            var newWindow = window.open(url, '_blank');
+            if (!newWindow || newWindow.closed || typeof newWindow.closed == 'undefined') {
+                // Popup-Blocker, versuchen Sie, den Link direkt zu öffnen
+                window.location.href = url;
+            }
         });
     </script>
 </body>

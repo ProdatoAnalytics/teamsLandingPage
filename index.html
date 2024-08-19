@@ -12,30 +12,31 @@
             margin: 0;
         }
 
-        button {
+        a {
+            display: inline-block;
             background-color: #6264a7;
             color: white;
-            border: none;
+            text-decoration: none;
             padding: 10px 20px;
             font-size: 16px;
             border-radius: 5px;
-            cursor: pointer;
+            text-align: center;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s ease, box-shadow 0.3s ease;
         }
 
-        button:hover {
+        a:hover {
             background-color: #464775;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
         }
 
-        button:focus {
+        a:focus {
             outline: none;
             box-shadow: 0 0 0 3px rgba(98, 100, 167, 0.5);
         }
     </style>
 </head>
 <body>
-    <button onclick="window.open('https://stackoverflowteams.com/c/prodato/questions/ask', '_blank')">Zum Frageformular</button>
+    <a href="https://stackoverflowteams.com/c/prodato/questions/ask" target="_blank">Zum Frageformular</a>
 </body>
 </html>
